@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" configuration-policy="require" name="MentionsTab">
+   <implementation class="tmitter.ui.mentions.MentionsTab"/>
+   <service>
+      <provide interface="com.codeaffine.example.rwt.osgi.ui.platform.UIContributor"/>
+   </service>
+   <reference bind="setServiceProvider" cardinality="1..1" interface="com.codeaffine.example.rwt.osgi.ui.platform.ServiceProvider" name="ServiceProvider" policy="static"/>
+</scr:component>

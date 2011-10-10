@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tmitter Model
+Bundle-SymbolicName: tmitter.model
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.google.gson;version="[1.6.0,2.0.0)"
+Export-Package: tmitter.model;version="1.0.0"
