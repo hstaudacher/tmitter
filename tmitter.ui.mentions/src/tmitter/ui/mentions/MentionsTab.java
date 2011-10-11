@@ -34,8 +34,10 @@ public class MentionsTab implements UIContributor {
     result.setLayout( new FillLayout() );
     List<String> allMonsterNames = MonsterUtil.getAllMonsterNames();
     Monster monster = serviceProvider.get( Monster.class );
-    TmeetsList tmeetsList = new TmeetsList( allMonsterNames, monster, "@" + monster.getName() );
-    tmeetsList.createContols( result );
+    if( monster != null ) {
+      TmeetsList tmeetsList = new TmeetsList( allMonsterNames, monster, "@" + monster.getName() );
+      tmeetsList.createContols( result );
+    }
     return result;
   }
 }

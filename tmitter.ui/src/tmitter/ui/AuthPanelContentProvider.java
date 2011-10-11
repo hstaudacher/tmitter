@@ -108,6 +108,7 @@ public class AuthPanelContentProvider implements UIContributor {
     result.setData( WidgetUtil.CUSTOM_VARIANT, LOGIN_VARIANT );
     result.setLayout( new FormLayout() );
     Label imageLabel = new Label( result, SWT.NONE );
+    imageLabel.setData( WidgetUtil.CUSTOM_VARIANT, "login" );
     Label nameLabel = createNameLabel( username, result );
     layoutSignoutControls( result, imageLabel, nameLabel );
     return result;

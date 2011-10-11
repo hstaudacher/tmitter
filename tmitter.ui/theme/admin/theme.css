@@ -1,10 +1,10 @@
 Label.logo {
-  background-image: url( "/theme/icons/logo.png" );
+  background-image: url( "/theme/admin/icons/logo.png" );
   background-color: transparent;
 }
 
 Label.footer_separator {
-  background-color: #a81414;
+  background-color: rgb( 63, 220, 8 );
 }
 
 Label.versionInfo {
@@ -12,7 +12,7 @@ Label.versionInfo {
 }
 
 Button.menu_button {
-  color: #a81414;
+  color: rgb( 63, 220, 8 );
   background-color: transparent;
   background-image: none;
   padding: 4px 6px 3px 10px;
@@ -21,7 +21,7 @@ Button.menu_button {
 }
 
 Button.menu_button:hover {
-  color: #d27575;
+  color: rgb( 68, 169, 0 );
 }
 
 Composite.menubar_background {
@@ -30,7 +30,7 @@ Composite.menubar_background {
 }
 
 Composite.header {
-  background-image: url( "/theme/icons/bg.png" );
+  background-image: url( "/theme/admin/icons/bg.png" );
 }
 
 Composite.content {
@@ -42,7 +42,7 @@ Shell {
 }
 
 Display {
-  background-image: url( "/theme/icons/bg.png" );
+  background-image: url( "/theme/admin/icons/bg.png" );
 }
 
 Composite.login {
@@ -50,7 +50,7 @@ Composite.login {
 }
 
 Button.login {
-  color: #a81414;
+  color: rgb( 63, 220, 8 );
   background-color: transparent;
   background-image: none;
   padding: 4px 6px 3px 10px;
@@ -59,17 +59,17 @@ Button.login {
 }
 
 Button.login:hover {
-  color: #d27575;
+  color: rgb( 68, 169, 0 );
 }
 
 Label.login {
   background-color: transparent;
-  color: #a81414;
+  color: rgb( 63, 220, 8 );
   font: 15px Arial, Verdana, "Lucida Sans", Helvetica, sans-serif;
 }
 
 Text {
-  border: 1px solid #a81414;
+  border: 1px solid rgb( 63, 220, 8 );
   border-radius: 2px;
 }
 
@@ -77,7 +77,7 @@ Shell-Titlebar {
   background-color: #0080c0;
   background-gradient-color: #0080c0;
   color: white;
-  background-image: gradient( linear, left top, left bottom, from( #d27575 ), to( #a81414 ) );
+  background-image: gradient( linear, left top, left bottom, from( rgb( 63, 220, 8 ) ), to( rgb( 68, 169, 0 ) ) );
   padding: 2px 5px 2px;
   margin: 0px;
   height: 20px;
@@ -87,7 +87,7 @@ Shell-Titlebar {
 }
 
 Label.timestamp {
-  color: #d27575;
+  color: rgb( 63, 220, 8 );
   background-color: transparent;
   font: 11px Arial, Verdana, "Lucida Sans", Helvetica, sans-serif;
 }
@@ -105,7 +105,7 @@ Label.update {
 }
 
 Text.update {
-  border: 1px solid #a81414;
+  border: 1px solid rgb( 63, 220, 8 );
   border-radius: 4px;
   font: bold 16px Arial, Verdana, "Lucida Sans", Helvetica, sans-serif;
 }

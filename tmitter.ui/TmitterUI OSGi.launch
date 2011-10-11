@@ -24,5 +24,5 @@
 <booleanAttribute key="tracing" value="false"/>
 <booleanAttribute key="useCustomFeatures" value="false"/>
 <booleanAttribute key="useDefaultConfigArea" value="true"/>
-<stringAttribute key="workspace_bundles" value="com.codeaffine.example.rwt.osgi.configurationadmin@default:default,com.codeaffine.example.rwt.osgi.ui.platform@default:default,org.eclipse.rap.jettycustomizer@default:false,tmitter.model@default:default,tmitter.ui.add@default:default,tmitter.ui.find@default:default,tmitter.ui.mentions@default:default,tmitter.ui@default:default"/>
+<stringAttribute key="workspace_bundles" value="com.codeaffine.example.rwt.osgi.configurationadmin@default:default,com.codeaffine.example.rwt.osgi.ui.platform@default:default,org.eclipse.rap.jettycustomizer@default:false,tmitter.admin.console@default:default,tmitter.model@default:default,tmitter.ui.add@default:default,tmitter.ui.find@default:default,tmitter.ui.mentions@default:default,tmitter.ui@default:default"/>
 </launchConfiguration>

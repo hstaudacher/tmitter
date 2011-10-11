@@ -36,12 +36,6 @@ public class PublicTimeLineTab implements UIContributor {
     tmeetsList = new TmeetsList( allMonsterNames, serviceProvider.get( Monster.class ), null );
     tmeetsList.createContols( result );
     return result;
-//    
-//    
-//    OSGiConsole osgiConsole = new OSGiConsole();
-//    osgiConsole.create( parent );
-//    osgiConsole.getControl().setFocus();
-//    return osgiConsole.getControl();
   }
 
   public void refreshList( Monster monster ) {

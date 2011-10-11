@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Admin Console
+Bundle-SymbolicName: tmitter.admin.console
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.codeaffine.example.rwt.osgi.configurationadmin.console;version="[1.0.0,1.1.0)",
+ com.codeaffine.example.rwt.osgi.ui.platform;version="[1.0.0,1.1.0)",
+ tmitter.model;version="[1.0.0,1.1.0)",
+ tmitter.ui;version="[1.0.0,1.1.0)"
+Require-Bundle: org.eclipse.rap.rwt;bundle-version="1.5.0"
+Service-Component: OSGI-INF/ConsoleTab.xml

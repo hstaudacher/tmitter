@@ -1,0 +1,118 @@
+Label.logo {
+  background-image: url( "/theme/main/icons/logo.png" );
+  background-color: transparent;
+}
+
+Label.footer_separator {
+  background-color: #a81414;
+}
+
+Label.versionInfo {
+  font: bold 12px "Charlemagne Std", serif;
+}
+
+Button.menu_button {
+  color: #a81414;
+  background-color: transparent;
+  background-image: none;
+  padding: 4px 6px 3px 10px;
+  font: bold 18px "Charlemagne Std", serif;
+  border: none;
+}
+
+Button.menu_button:hover {
+  color: #d27575;
+}
+
+Composite.menubar_background {
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+Composite.header {
+  background-image: url( "/theme/main/icons/bg.png" );
+}
+
+Composite.content {
+  background-color: white;
+}
+
+Shell {
+  border: none;
+}
+
+Display {
+  background-image: url( "/theme/main/icons/bg.png" );
+}
+
+Composite.login {
+  background-color: transparent;
+}
+
+Button.login {
+  color: #a81414;
+  background-color: transparent;
+  background-image: none;
+  padding: 4px 6px 3px 10px;
+  font: 14px "Charlemagne Std", serif;
+  border: none;
+}
+
+Button.login:hover {
+  color: #d27575;
+}
+
+Label.login {
+  background-color: transparent;
+  color: #a81414;
+  font: 15px Arial, Verdana, "Lucida Sans", Helvetica, sans-serif;
+}
+
+Text {
+  border: 1px solid #a81414;
+  border-radius: 2px;
+}
+
+Shell-Titlebar {
+  background-color: #0080c0;
+  background-gradient-color: #0080c0;
+  color: white;
+  background-image: gradient( linear, left top, left bottom, from( #d27575 ), to( #a81414 ) );
+  padding: 2px 5px 2px;
+  margin: 0px;
+  height: 20px;
+  border: none;
+  border-radius: 3px 3px 0px 0px;
+  text-shadow: none;
+}
+
+Label.timestamp {
+  color: #d27575;
+  background-color: transparent;
+  font: 11px Arial, Verdana, "Lucida Sans", Helvetica, sans-serif;
+}
+
+Label.tmeet {
+  color: black;
+  background-color: transparent;
+  font: bold 16px Arial, Verdana, "Lucida Sans", Helvetica, sans-serif;
+}
+
+Label.update {
+  color: black;
+  background-color: transparent;
+  font: bold 14px Arial, Verdana, "Lucida Sans", Helvetica, sans-serif;
+}
+
+Text.update {
+  border: 1px solid #a81414;
+  border-radius: 4px;
+  font: bold 16px Arial, Verdana, "Lucida Sans", Helvetica, sans-serif;
+}
+
+Composite.tmeet {
+  background-color: #e5e4e4;
+  border-radius: 0px 10px 10px 0px;
+}
+
+
