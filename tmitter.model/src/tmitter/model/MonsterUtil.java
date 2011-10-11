@@ -134,5 +134,12 @@ public class MonsterUtil {
     // prevent instantiation
   }
 
+  public static void deleteMonster( String monsterToDelete ) {
+    File monsterFile = getMonsterFile( monsterToDelete );
+    if( monsterFile.exists() ) {
+      monsterFile.delete();
+    }
+  }
+
   
 }
