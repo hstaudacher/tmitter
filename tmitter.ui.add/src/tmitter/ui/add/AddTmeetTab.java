@@ -148,7 +148,13 @@ public class AddTmeetTab implements UIContributor {
   private void createTmeetList( Composite tmeetListContainer ) {
     monster = serviceProvider.get( Monster.class );
     if( monster != null ) {
-      List<String> watchedMonsters = new ArrayList<String>( monster.getWatchedMonsters() );
+      List<String> realWatchedMonsters = monster.getWatchedMonsters();
+      ArrayList<String> watchedMonsters;
+      if( realWatchedMonsters == null ) {
+        watchedMonsters = new ArrayList<String>();
+      } else {
+        watchedMonsters = new ArrayList<String>( realWatchedMonsters );
+      }
       watchedMonsters.add( monster.getName() );
       tmeetList = new TmeetsList( watchedMonsters, monster, null );
       tmeetList.createContols( tmeetListContainer );

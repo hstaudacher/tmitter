@@ -186,7 +186,9 @@ public class TmeetsList {
                                    Button retmeetButton )
   {
     final String name = tmeetMap.get( tmeet ).getName();
-    if(    !currentMonster.getWatchedMonsters().contains( name ) 
+    List<String> watchedMonsters = currentMonster.getWatchedMonsters();
+    if(    watchedMonsters != null 
+        && !watchedMonsters.contains( name ) 
         && !name.equals( currentMonster.getName() ) ) 
     {
       createFollowButton( container, retmeetButton, name );

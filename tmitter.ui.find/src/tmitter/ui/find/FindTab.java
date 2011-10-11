@@ -156,7 +156,8 @@ public class FindTab implements UIContributor {
     Label imageLabel = createImageLabel( monster, container );
     createNameLabel( monster, container, imageLabel );
     createSpeciesLabel( monster, container, imageLabel );
-    if( !currentMonster.getWatchedMonsters().contains( monster.getName() ) ) {
+    List<String> watchedMonsters = currentMonster.getWatchedMonsters();
+    if( watchedMonsters == null || !watchedMonsters.contains( monster.getName() ) ) {
       createFollowButton( currentMonster, monster, container );
     } else {
       createUnfollowButton( currentMonster, monster, container );
