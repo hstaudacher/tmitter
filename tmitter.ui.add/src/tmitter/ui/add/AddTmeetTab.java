@@ -170,7 +170,13 @@ public class AddTmeetTab implements UIContributor {
   }
 
   private void refreshList() {
-    List<String> watchedMonsters = new ArrayList<String>( monster.getWatchedMonsters() );
+    List<String> originalWatchedMonsters = monster.getWatchedMonsters();
+    List<String> watchedMonsters;
+    if( originalWatchedMonsters != null ) {
+      watchedMonsters = new ArrayList<String>( originalWatchedMonsters );
+    } else {
+      watchedMonsters = new ArrayList<String>();
+    }
     watchedMonsters.add( monster.getName() );
     tmeetList.setMonsters( watchedMonsters );
     tmeetList.refresh( monster );

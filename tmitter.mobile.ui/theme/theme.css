@@ -1,0 +1,70 @@
+Label {
+  font: 18px Helvetica, Arial, Verdana, "Lucida Sans", sans-serif;
+}
+
+Button[PUSH] {
+  font: 28px Helvetica, Arial, Verdana, "Lucida Sans", sans-serif;
+}
+
+Button[RADIO],Button[CHECK] {
+  font: 25px Helvetica, Arial, Verdana, "Lucida Sans", sans-serif;
+  spacing: 8px;
+}
+
+Text {
+  font: 15px Helvetica, Arial, Verdana, "Lucida Sans", sans-serif;
+}
+
+Link,Link-Hyperlink {
+  font: 13px Helvetica, Arial, Verdana, "Lucida Sans", sans-serif;
+}
+
+Combo {
+  font: 25px Helvetica, Arial, Verdana, "Lucida Sans", sans-serif;
+}
+
+ScrollBar {
+  width: 0px;
+}
+
+
+Button-CheckIcon {
+  background-image: url( theme/checkbox_unchecked.png );
+}
+
+Button-CheckIcon:hover {
+  background-image: url( theme/checkbox_unchecked.png );
+}
+
+Button-CheckIcon:selected {
+  background-image: url( theme/checkbox_checked.png );
+}
+
+Button-CheckIcon:selected:hover {
+  background-image: url( theme/checkbox_checked.png );
+}
+
+Button-CheckIcon:selected:grayed {
+  background-image: url( theme/checkbox_checked.png );
+}
+
+Button-CheckIcon:selected:grayed:hover {
+  background-image: url( theme/checkbox_checked.png );
+}
+
+Button-RadioIcon {
+  background-image: url( theme/radio_unchecked.png );
+}
+
+Button-RadioIcon:hover {
+  background-image: url( theme/radio_unchecked.png );
+}
+
+Button-RadioIcon:selected {
+  background-image: url( theme/radio_checked.png );
+}
+
+Button-RadioIcon:selected:hover {
+  background-image: url( theme/radio_checked.png );
+}
+
