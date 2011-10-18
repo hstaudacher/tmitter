@@ -1,0 +1,28 @@
+== Tmitter Description ==         
+Tmitter demonstrates an example UI implementation of a dynamic RAP Application using OSGi. Tmitter stands for "Twitter for Monsters". This application uses the UI framework from the RWT_CONFIG_ADMIN_EXAMPLE git repository which can be found at https://github.com/fappel/RWT_CONFIG_ADMIN_EXAMPLE.
+
+== OSGi Console Commands ==
+startHttpService 9090
+deployApplication TmitterUI 9090
+deployUIContribution PublicTimeLineTab TmitterUI 9090
+deployUIContribution AddTmeetTab TmitterUI 9090
+deployUIContribution MentionsTab TmitterUI 9090
+deployUIContribution FindTab TmitterUI 9090
+
+startHttpService 9091
+deployApplication TmitterAdminUI 9091
+deployUIContribution PublicTimeLineTab TmitterAdminUI 9091
+deployUIContribution ConsoleTab TmitterAdminUI 9091
+deployUIContribution ManageUsersTab TmitterAdminUI 9091
+
+startHttpService 9999
+deployApplication TmitterMobileUI 9999
+
+== Entry points ==
+Tmitter UI => http://localhost:9090/tmitter
+Tmitter Admin UI => http://localhost:9091/tmitter-admin
+Tmitter Mobile UI => http://localhost:9999/mobile
+
+== License ==
+All Source Code Files are licensed with the Eclipse Public License - v 1.0
+http://www.eclipse.org/legal/epl-v10.html
