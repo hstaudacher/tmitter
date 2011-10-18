@@ -33,6 +33,7 @@ class MenuBarProvider implements UIContributor {
   private Composite menuParent;
   private Map<UIContributor, Button> buttonMap;
   private List<UIContributor> pageQueue;
+  private PublicTimeLineTab pubicTimeLineTab;
 
   MenuBarProvider( ServiceProvider serviceProvider ) {
     this.serviceProvider = serviceProvider;
@@ -58,9 +59,10 @@ class MenuBarProvider implements UIContributor {
       @Override
       public void pageAdded( UIContributor page ) {
         if( page instanceof PublicTimeLineTab ) {
-          pageService.setHomePageContributor( page );
+          pubicTimeLineTab = ( PublicTimeLineTab )page;
         }
         addPage( page );
+        menuParent.layout( true, true );
       }
 
       @Override
@@ -93,6 +95,7 @@ class MenuBarProvider implements UIContributor {
     for( UIContributor contributor : tmpPageQueue ) {
       addPage( contributor );
     }
+    menuParent.layout( true, true );
     recreateTweetList( serviceProvider.get( Monster.class ) );
   }
   
@@ -100,7 +103,7 @@ class MenuBarProvider implements UIContributor {
     Map<UIContributor, Button> tmpButtonMap = new HashMap<UIContributor, Button>( buttonMap );
     Set<UIContributor> keySet = tmpButtonMap.keySet();
     for( UIContributor uiContributor : keySet ) {
-      if( !isHomePage( uiContributor ) ) {
+      if( !uiContributor.getId().equals( PublicTimeLineTab.ID ) ) {
         Button button = buttonMap.get( uiContributor );
         if( button != null && !button.isDisposed() ) {
           button.dispose();
@@ -113,17 +116,13 @@ class MenuBarProvider implements UIContributor {
   }
 
   private void recreateTweetList( Monster curentMonster ) {
-    PageService pageService = serviceProvider.get( PageService.class );
-    UIContributor homePageContributor = pageService.getHomePageContributor();
-    if( homePageContributor != null && ( homePageContributor instanceof PublicTimeLineTab ) ) {
-      PublicTimeLineTab tab = ( PublicTimeLineTab )homePageContributor;
-      tab.refreshList( curentMonster );
+    if( pubicTimeLineTab != null ) {
+      pubicTimeLineTab.refreshList( curentMonster );
     }
   }
 
   private boolean isHomePage( UIContributor uiContributor ) {
-    PageService pageService = serviceProvider.get( PageService.class );
-    return pageService.isHomePage( uiContributor );
+    return uiContributor.getId().equals( PublicTimeLineTab.ID );
   }
 
   protected void removePage( UIContributor page ) {

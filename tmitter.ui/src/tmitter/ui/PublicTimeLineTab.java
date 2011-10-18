@@ -16,6 +16,7 @@ import com.codeaffine.example.rwt.osgi.ui.platform.UIContributor;
 
 public class PublicTimeLineTab implements UIContributor {
   
+  public static final String ID = "All Tmeets";
   ServiceProvider serviceProvider;
   private TmeetsList tmeetsList;
 
@@ -25,7 +26,7 @@ public class PublicTimeLineTab implements UIContributor {
   
   @Override
   public String getId() {
-    return "All Tmeets";
+    return ID;
   }
 
   @Override

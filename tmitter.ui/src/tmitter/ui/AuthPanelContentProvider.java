@@ -169,9 +169,10 @@ public class AuthPanelContentProvider implements UIContributor {
     MenuBarProvider menuBarProvider = serviceProvider.get( MenuBarProvider.class );
     menuBarProvider.hideMenuEntries();
     control = createControls( false );
+    container.layout( true, true );
     PageService pageService = serviceProvider.get( PageService.class );
     pageService.selectHomePage();
-    pageService.relayoutApplication();
+    pageService.selectPage( PublicTimeLineTab.ID );
   }
 
   private Control createSignInControls( ) {
@@ -344,8 +345,7 @@ public class AuthPanelContentProvider implements UIContributor {
     MenuBarProvider menuBarProvider = serviceProvider.get( MenuBarProvider.class );
     menuBarProvider.flushPageQueue();
     control = createControls( false );
-    PageService pageService = serviceProvider.get( PageService.class );
-    pageService.relayoutApplication();
+    container.layout( true, true );
   }
 
 }
