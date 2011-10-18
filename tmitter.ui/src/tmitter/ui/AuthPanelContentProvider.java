@@ -172,7 +172,20 @@ public class AuthPanelContentProvider implements UIContributor {
     container.layout( true, true );
     PageService pageService = serviceProvider.get( PageService.class );
     pageService.selectHomePage();
-    pageService.selectPage( PublicTimeLineTab.ID );
+    if( hasHomePage( pageService ) ) {
+      pageService.selectPage( PublicTimeLineTab.ID );
+    }
+  }
+
+  private boolean hasHomePage( PageService pageService ) {
+    boolean result = false;
+    String[] pageIds = pageService.getPageIds();
+    for( String id : pageIds ) {
+      if( id.equals( PublicTimeLineTab.ID ) ) {
+        result = true;
+      }
+    }
+    return result;
   }
 
   private Control createSignInControls( ) {
@@ -335,8 +348,10 @@ public class AuthPanelContentProvider implements UIContributor {
   private void login( String userName ) {
     currentMonster = MonsterUtil.loadMonster( userName );
     serviceProvider.register( Monster.class, currentMonster );
-    Cookie cookie = new Cookie( AUTH_COOKIE, userName );
-    RWT.getResponse().addCookie( cookie );
+    if( userName != null && !userName.equals( "" ) ) {
+      Cookie cookie = new Cookie( AUTH_COOKIE, userName );
+      RWT.getResponse().addCookie( cookie );
+    }
   }
 
   private void updateUI() {
