@@ -15,7 +15,7 @@ public class App implements ApplicationConfigurator {
     configuration.addEntryPoint( "default", UIEntryPoint.class );
     configuration.addStyleSheet( TMITTER_UI, "theme/main/theme.css" );
     configuration.addBranding( new UIBranding() );
-    configuration.addPhaseListener( new ShellPositioner() );
+    configuration.addPhaseListener( new ShellPositioner( false ) );
     new ConfiguratorTracker( this, configuration ).open();
   }
 }

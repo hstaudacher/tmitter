@@ -16,7 +16,7 @@ public class AdminApp implements ApplicationConfigurator {
     configuration.addEntryPoint( "default", UIAdminEntryPoint.class );
     configuration.addStyleSheet( TMITTER_UI, "theme/admin/theme.css" );
     configuration.addBranding( new UIAdminBranding() );
-    configuration.addPhaseListener( new ShellPositioner() );
+    configuration.addPhaseListener( new ShellPositioner( false ) );
     new ConfiguratorTracker( this, configuration ).open();
   }
 }
