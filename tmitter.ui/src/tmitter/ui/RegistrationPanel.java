@@ -1,6 +1,8 @@
 package tmitter.ui;
 
 import org.eclipse.rwt.lifecycle.WidgetUtil;
+import org.eclipse.rwt.widgets.DialogCallback;
+import org.eclipse.rwt.widgets.DialogUtil;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -117,7 +119,15 @@ public class RegistrationPanel {
       MessageBox box = new MessageBox( signupShell, SWT.ICON_ERROR | SWT.OK );
       box.setText( "Error during sign up" );
       box.setMessage( "Groar, your name is allready taken. Try another one..." );
-      box.open();
+      DialogUtil.open( box, new DialogCallback() {
+        
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        public void dialogClosed( int returnCode ) {
+          // TODO Auto-generated method stub
+        }
+      } );
     } else {
       MonsterUtil.saveMonster( monster );
       signupShell.close();

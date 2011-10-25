@@ -23,7 +23,6 @@ public class UIEntryPoint implements IEntryPoint {
     initializeServiceProvider();
     configureShell();
     openShell();
-    spinReadAndDispatch();
     return 0;
   }
 
@@ -56,14 +55,5 @@ public class UIEntryPoint implements IEntryPoint {
 
   private void openShell() {
     shell.open();
-  }
-
-  private void spinReadAndDispatch() {
-    Display display = shell.getDisplay();
-    while( !shell.isDisposed() ) {
-      if( !display.readAndDispatch() ) {
-        display.sleep();
-      }
-    }
   }
 }

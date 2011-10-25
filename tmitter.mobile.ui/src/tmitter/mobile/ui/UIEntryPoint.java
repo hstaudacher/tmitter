@@ -62,11 +62,6 @@ public class UIEntryPoint implements IEntryPoint {
       }
     } );
     shell.open();
-    while( !shell.isDisposed() ) {
-      if( !display.readAndDispatch() )
-        display.sleep();
-    }
-    display.dispose();
     return 0;
   }
 
