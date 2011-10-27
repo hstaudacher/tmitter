@@ -1,6 +1,9 @@
 == Tmitter Description ==         
 Tmitter demonstrates an example UI implementation of a dynamic RAP Application using OSGi. Tmitter stands for "Twitter for Monsters". This application uses the UI framework from the RWT_CONFIG_ADMIN_EXAMPLE git repository which can be found at https://github.com/fappel/RWT_CONFIG_ADMIN_EXAMPLE.
 
+== Setup ==
+Before you can run Tmitter you need to create some Tmeets. Therefor the class MonsterCrator exists which can run as a normal Java Application.
+
 == OSGi Console Commands ==
 startHttpService 9090
 deployApplication TmitterUI 9090
