@@ -80,7 +80,7 @@ Shell-Titlebar {
   background-image: gradient( linear, left top, left bottom, from( #d27575 ), to( #a81414 ) );
   padding: 2px 5px 2px;
   margin: 0px;
-  height: 20px;
+  height: 25px;
   border: none;
   border-radius: 3px 3px 0px 0px;
   text-shadow: none;

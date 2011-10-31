@@ -34,7 +34,7 @@ import com.codeaffine.example.rwt.osgi.ui.platform.UIContributor;
 
 
 public class AuthPanelContentProvider implements UIContributor {
-  
+
   public static final String AUTH_CONTROL = AuthPanelContentProvider.class.getName() + "#AUTH";
   private static final String AUTH_COOKIE = "tmitter-auth";
   static final String LOGIN_VARIANT = "login";
@@ -76,7 +76,7 @@ public class AuthPanelContentProvider implements UIContributor {
     }
     return result;
   }
-  
+
   private boolean hasAuthCookie() {
     boolean result = false;
     Cookie[] cookies = RWT.getRequest().getCookies();
@@ -88,7 +88,7 @@ public class AuthPanelContentProvider implements UIContributor {
           }
         }
       }
-    } 
+    }
     return result;
   }
 
@@ -128,13 +128,14 @@ public class AuthPanelContentProvider implements UIContributor {
     signOutButton.addSelectionListener( new SelectionAdapter() {
       private static final long serialVersionUID = 1L;
 
+      @Override
       public void widgetSelected( SelectionEvent e ) {
         signOut();
       }
     } );
     return signOutButton;
   }
-  
+
   private void layoutSignoutControls( Composite result,
                                       Label imageLabel,
                                       Label nameLabel )
@@ -208,6 +209,7 @@ public class AuthPanelContentProvider implements UIContributor {
     loginButton.addSelectionListener( new SelectionAdapter() {
       private static final long serialVersionUID = 1L;
 
+      @Override
       public void widgetSelected( SelectionEvent e ) {
         openLoginDialog( container.getShell() );
       }
@@ -222,6 +224,7 @@ public class AuthPanelContentProvider implements UIContributor {
     signupButton.addSelectionListener( new SelectionAdapter() {
       private static final long serialVersionUID = 1L;
 
+      @Override
       public void widgetSelected( SelectionEvent e ) {
         RegistrationPanel registrationPanel = new RegistrationPanel();
         registrationPanel.open( result.getShell() );
@@ -250,6 +253,7 @@ public class AuthPanelContentProvider implements UIContributor {
     createLoginButton( loginParent, loginShell );
     configureShell( loginShell );
     userNameText.setFocus();
+    loginShell.pack();
     loginShell.open();
   }
 
@@ -263,7 +267,7 @@ public class AuthPanelContentProvider implements UIContributor {
     int y = bounds.y + ( bounds.height - rect.height ) / 2;
     loginShell.setLocation( x, y );
   }
-  
+
   private void createLoginInputControls( Composite loginParent, final Shell loginShell ) {
     Label userNameLabel = new Label( loginParent, SWT.NONE );
     userNameLabel.setText( "username" );

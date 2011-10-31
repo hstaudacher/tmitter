@@ -45,9 +45,10 @@ public class RegistrationPanel {
     createLoginButton( signupParent, signupShell );
     configureShell( signupShell );
     userNameText.setFocus();
+    signupShell.pack();
     signupShell.open();
   }
-  
+
   private void createLoginInputControls( Composite signupParent, final Shell signupShell ) {
     Label userNameLabel = new Label( signupParent, SWT.NONE );
     userNameLabel.setText( "username" );
@@ -98,7 +99,7 @@ public class RegistrationPanel {
       }
     } );
   }
-  
+
   private void configureShell( Shell signupShell ) {
     signupShell.setData( WidgetUtil.CUSTOM_VARIANT, AuthPanelContentProvider.LOGIN_VARIANT );
     signupShell.setText( "Sign Up" );
@@ -120,7 +121,7 @@ public class RegistrationPanel {
       box.setText( "Error during sign up" );
       box.setMessage( "Groar, your name is allready taken. Try another one..." );
       DialogUtil.open( box, new DialogCallback() {
-        
+
         private static final long serialVersionUID = 1L;
 
         @Override
