@@ -238,7 +238,7 @@ public class AuthPanelContentProvider implements UIContributor {
   }
 
   protected void openLoginDialog( Shell shell ) {
-    Shell loginShell = new Shell( shell, SWT.APPLICATION_MODAL | SWT.SHELL_TRIM );
+    Shell loginShell = new Shell( shell, SWT.APPLICATION_MODAL | SWT.TITLE | SWT.CLOSE );
     loginShell.setLayout( new GridLayout( 1, true ) );
     Composite loginParent = new Composite( loginShell, SWT.NONE );
     loginParent.setData( WidgetUtil.CUSTOM_VARIANT, LOGIN_VARIANT );
