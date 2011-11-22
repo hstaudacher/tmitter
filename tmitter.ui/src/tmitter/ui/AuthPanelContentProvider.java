@@ -97,7 +97,10 @@ public class AuthPanelContentProvider implements UIContributor {
     Cookie[] cookies = RWT.getRequest().getCookies();
     for( Cookie cookie : cookies ) {
       if( cookie.getName().equals( AUTH_COOKIE ) ) {
-        result = cookie.getValue();
+        String value = cookie.getValue();
+        if( !"".equals( value ) ) {
+          result = value;
+        }
       }
     }
     return result;
