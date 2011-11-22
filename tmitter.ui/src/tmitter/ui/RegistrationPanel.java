@@ -30,7 +30,7 @@ public class RegistrationPanel {
   private Shell signupShell;
 
   public void open( Shell parent ) {
-    signupShell = new Shell( parent, SWT.APPLICATION_MODAL | SWT.SHELL_TRIM );
+    signupShell = new Shell( parent, SWT.APPLICATION_MODAL | SWT.TITLE | SWT.CLOSE );
     signupShell.setLayout( new GridLayout( 1, true ) );
     Composite signupParent = new Composite( signupShell, SWT.NONE );
     signupParent.setData( WidgetUtil.CUSTOM_VARIANT, AuthPanelContentProvider.LOGIN_VARIANT );
